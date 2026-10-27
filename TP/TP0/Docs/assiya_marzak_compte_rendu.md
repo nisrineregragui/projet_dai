@@ -40,7 +40,7 @@ Oui. La régression logistique obtient un rappel de 0.847, au-dessus de 0,75, et
 
 # TP1 : CantineAI
 
-**Nom :** Bouthaina Bouargane · **Groupe :** G2
+**Nom :** Assiya MARZAK · **Groupe :** G2
 
 ## Le problème
 
