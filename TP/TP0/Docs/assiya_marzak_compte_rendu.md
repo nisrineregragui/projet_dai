@@ -29,7 +29,7 @@ on ne sait pas si les donnees representent tous les cas reels. il faudrait plus 
 
 # TP0 : CantineAI
 
-**Nom :** Adam TAFRHY · **Groupe :** G2
+**Nom :** Assiya MARZAK · **Groupe :** G2
 
 ## Le problème
 
