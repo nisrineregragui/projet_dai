@@ -225,7 +225,7 @@ Non, ce ne sont pas la même origine car leurs ports sont différents (CORS bloq
 
 ## 8. Le rendu Git
 
-- Lien de la pull request : https://github.com/nisrineregragui/projet_dai/pull/N
+- Lien de la pull request : https://github.com/nisrineregragui/projet_dai/pull/2
 - Le tag `tp2` existe sur GitHub : oui 
 - `git status` avant le commit : le fichier `.env` apparaissait-il ? 
 non — il est ignoré par le .gitignore (vérifié avec `git check-ignore -v`
