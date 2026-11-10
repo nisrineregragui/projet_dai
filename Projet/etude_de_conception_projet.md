@@ -45,6 +45,29 @@
   - _Modèle 2 :_ $\text{F1-score macro} \ge 0,82$.
   - _Modèle 3 :_ $\text{MAE} \le 8\text{ minutes}$ et $R^2 \ge 0,88$.
 
+  ## 6. Architecture prévue
+
+* **Flux de données :**
+  `Télémétrie Capteurs (IoT / CSV)` $\rightarrow$ `Prétraitement & Validation (Pydantic)` $\rightarrow$ `Moteur de Prédiction (Package maintai)` $\rightarrow$ `API Backend (FastAPI)` $\rightarrow$ `Interface Utilisateur (Streamlit) / CLI (maintai-predict)`
+* **Composants clés du système :**
+
+1. **Bibliothèque de cœur (`maintai`) :** Module Python autonome contenant les pipelines de prétraitement, les fonctions de chargement des données, d'entraînement et les prédicteurs encapsulant les modèles (`joblib`).
+2. **API Backend (`maintai.api` / FastAPI) :** Service Web REST sous Uvicorn responsable de recevoir les relevés de capteurs au format JSON, de valider les schémas via Pydantic, de vérifier l'authentification (`X-API-Key`) et de renvoyer la probabilité de panne ainsi que le diagnostic.
+3. **Interface Graphique (`ui/app.py` / Streamlit) :** Tableau de bord interactif permettant d'explorer les historiques télémétriques, de simuler des relevés en direct, d'afficher des alertes visuelles et de consulter l'estimation du temps restant avant intervention.
+4. **Interface Ligne de Commande (`maintai-predict` / CLI) :** Point d'entrée binaire autonome s'exécutant directement sur le serveur local sans nécessiter de serveur HTTP actif.
+
+## 7. Choix technologiques
+
+| Brique fonctionnelle          | Technologie retenue                      | Justification du choix                                                                                                              |
+| ----------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Langage & Environnement**   | Python 3.11+                             | Écosystème de référence en Data Science et Machine Learning, support étendu des bibliothèques d'inférence.                          |
+| **Traitements de données**    | `pandas`, `numpy`                        | Manipulation performante de données tabulaires et calcul vectorisé sur les séries temporelles de capteurs.                          |
+| **Modélisation ML**           | `scikit-learn`, `LightGBM`, `CatBoost`   | Algorithmes d'ensembles d'arbres optimisés pour les données tabulaires et la gestion du déséquilibre de classes.                    |
+| **API Backend**               | `FastAPI` + `Uvicorn`                    | API REST asynchrone hautement performante avec typage strict, validation automatique (Pydantic) et documentation OpenAPI.           |
+| **Interface Graphique**       | `Streamlit`                              | Création rapide de dashboards interactifs pour les techniciens de maintenance entièrement développés en Python.                     |
+| **Packaging & Distribution**  | `setuptools` (`pyproject.toml`), `wheel` | Normalisation du packaging Python, support de l'installation éditable (`pip install -e .`) et génération d'un exécutable CLI dédié. |
+| **Sérialisation des modèles** | `joblib`                                 | Sauvegarde et déchargement rapide des estimateurs et des pipelines de prétraitement Scikit-Learn.                                   |
+
 ## 8. Risques, éthique, confidentialité : répondre aux huit questions ci-dessous
 
 1. **Les données contiennent-elles des données personnelles ? Lesquelles ?**
