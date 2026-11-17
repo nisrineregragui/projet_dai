@@ -183,8 +183,8 @@ D'après le tableau « Livrer un modèle » du polycopié, ce sont le code, le m
 
 ## 7. Le rendu Git
 
-- Lien de la pull request : (à venir)
-- Le tag `tp5` existe sur GitHub : (à venir)
+- Lien de la pull request : pas de pull request, les fichiers ont été poussés directement sur `master` (commit `0a8054f`) : https://github.com/nisrineregragui/projet_dai/tree/master/TP/TP5/tp5_BouthainaBouargane
+- Le tag `tp5` existe sur GitHub : oui
 - `git status` avant le commit : `mlflow.db`, `mlruns/`, `data/sensors.csv` ou `.dvc/cache` apparaissaient-ils ? non : le `.gitignore` les exclut, et `git status` ne listait que le code, le compte rendu, l'ADR et les fichiers de configuration.
 
 ## 8. Ce qui reste flou
