@@ -1,6 +1,6 @@
 # Compte rendu · TP5 : suivre les entraînements (MLflow) et versionner les données (DVC)
 
-**Groupe :** …  ·  **Membres :** …  ·  **Date :** 17/11/2026  17:34
+**Groupe :**G2  ·  **Membres :** Assiya MARZAK ·  **Date :** 17/11/2026  17:34
 
 > Remplissez chaque partie dans ce fichier, puis rendez-le avec la pull request du TP5.
 > Collez les sorties du terminal entre les lignes ``` (trois accents graves).
