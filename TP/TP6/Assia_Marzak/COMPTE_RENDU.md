@@ -185,6 +185,3 @@ Dans `docs/adr/005-image-docker.md`. Résumez ici votre décision en deux phrase
 - Le tag `tp6` existe sur GitHub : À REMPLIR (oui / non)
 - `git status` avant le commit : `.env`, `models/` ou `data/*.csv` apparaissaient-ils ? À REMPLIR (attendu : non, car ils sont ignorés)
 
-## 9. Ce qui reste flou
-
-À REMPLIR avec vos vraies questions. Idées si vous n'avez rien de précis : la différence entre `EXPOSE` et `-p`, ou le fait que `depends_on` n'attend pas que l'API soit prête.
