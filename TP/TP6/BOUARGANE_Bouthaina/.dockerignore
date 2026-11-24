@@ -1,0 +1,42 @@
+
+# Ce qui n'entre jamais dans l'image : lourd, local ou secret
+
+# Environnement virtuel Python
+.venv/
+**/.venv/
+
+# Fichiers Python temporaires
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches et résultats de tests
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Git
+.git/
+
+# Fichiers de construction et de distribution
+dist/
+build/
+**/*.egg-info/
+
+# Tests : inutiles dans l'image de production
+tests/
+
+# Données et modèles : fournis au lancement par volumes Docker
+data/
+models/
+
+# Secrets et configuration locale
+.env
+mlflow.db
+
+# Fichiers propres aux systèmes et éditeurs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
