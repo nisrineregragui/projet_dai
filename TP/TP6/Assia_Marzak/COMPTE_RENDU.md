@@ -184,4 +184,3 @@ Dans `docs/adr/005-image-docker.md`. Résumez ici votre décision en deux phrase
 - Lien de la pull request : À REMPLIR
 - Le tag `tp6` existe sur GitHub : À REMPLIR (oui / non)
 - `git status` avant le commit : `.env`, `models/` ou `data/*.csv` apparaissaient-ils ? À REMPLIR (attendu : non, car ils sont ignorés)
-
